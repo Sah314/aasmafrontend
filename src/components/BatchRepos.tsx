@@ -51,7 +51,8 @@ const BatchRepos:React.FC = () => {
         
     <div> 
         <button onClick={()=>navigate('/')} className='btn'>Go Back</button>
-        <h2 className=' text-2xl text-[#FFE4FC]'> Top {count} Github repos</h2>
+        <h2 className=' text-2xl text-[#FFE4FC]'> Github repos </h2>
+        <h2 className=' text-2xl text-[#FFE4FC]'> Batch count: {count} </h2>
       {items ? (
         <table className='table'>
           <thead className='text-xl text-[#FFE4FC]'>
