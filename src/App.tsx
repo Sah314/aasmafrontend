@@ -1,32 +1,20 @@
-import {useEffect} from 'react';
-import axios from "axios";
 import './App.css';
+import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
+import TopRepos from './components/TopRepos';
+import Home from './components/Home';
 
 function App() {
 
-
-useEffect(() => {
-  
-
-  return () => {
-    
-  }
-}, [])
-
-
   return (
-   <>
-   <div className="App" >
-   <details className="dropdown fixed top-80 right-1/2">
-  <summary className="m-1 btn border-none text-[#63BAAB] text-center ml-10">open or close</summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-52 text-[#63BAAB] bg-slate-800 mt-3 mr-3 pr-3">
-    <button>get top 10 repos</button>
-    <button>get top 50 repos</button>
-    <button>get top 100 repos</button>
-  </ul>
-</details>
+
+    <div className="App">
+     <Router>
+   <Routes>
+   <Route path="/top-repos/:count" Component={TopRepos} />
+   <Route path="/" Component={Home} />
+   </Routes>
+   </Router>
    </div>
-   </>
   );
 }
 
