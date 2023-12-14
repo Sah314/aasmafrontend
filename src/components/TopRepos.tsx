@@ -3,6 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
 
+type Repo = {
+    name: string;
+    owner: {
+      login: string;
+    };
+    stargazers_count: number;
+    open_issues: number;
+    // Add more properties as needed
+  };
+  
 const TopRepos:React.FC= () => {
 const navigate = useNavigate();
     const { count } = useParams<{ count: string }>(); // Extract the count parameter from the route
@@ -24,17 +34,6 @@ setItems(apidata.data.items)
 }
 getData();  
 }, [count])
-
-
-type Repo = {
-    name: string;
-    owner: {
-      login: string;
-    };
-    stargazers_count: number;
-    open_issues: number;
-    // Add more properties as needed
-  };
   
   return (
     <div className=' '>
