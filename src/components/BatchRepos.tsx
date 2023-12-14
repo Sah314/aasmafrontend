@@ -21,7 +21,7 @@ const BatchRepos:React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const apidata = await axios.get(`http://aasmabackend-production.up.railway.app/v1/batch/${count}/${pageNo}`);
+            const apidata = await axios.get(`https://aasmabackend-production.up.railway.app/v1/batch/${count}/${pageNo}`);
             
             if (apidata.data) {
               console.log(apidata.data.items);

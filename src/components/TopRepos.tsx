@@ -23,7 +23,7 @@ const [items,setItems] = useState<Repo[] | null>(null);
 
 useEffect(() => {
 const getData=async()=>{
-const apidata = await axios.get(`http://aasmabackend-production.up.railway.app/v1/top/${count}`);
+const apidata = await axios.get(`https://aasmabackend-production.up.railway.app/v1/top/${count}`);
 try {
     if(apidata.data)
 console.log(apidata.data.items);
